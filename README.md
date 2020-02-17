@@ -21,6 +21,14 @@ sanitizer.write('  "other-string": "other-value"\n');
 sanitizer.end('}');
 ```
 
+## Benchmarks
+
+```
+$ npm run bench
+...
+Throughput: 36.45 mb/s (±2.76 %)
+```
+
 #### LICENSE
 
 This software is licensed under the MIT License.
