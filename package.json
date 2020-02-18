@@ -1,6 +1,6 @@
 {
   "name": "json-stream-sanitizer",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Sanitize strings in JSON stream",
   "main": "lib/sanitizer.js",
   "scripts": {
