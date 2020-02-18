@@ -1,5 +1,7 @@
 # json-stream-sanitizer
 [![Build Status](https://secure.travis-ci.org/indutny/json-stream-sanitizer.svg)](http://travis-ci.org/indutny/json-stream-sanitizer)
+[![NPM version](https://badge.fury.io/js/json-stream-sanitizer.svg)](https://badge.fury.io/js/json-stream-sanitizer)
+![License](https://img.shields.io/npm/l/json-stream-sanitizer)
 
 Sanitize strings in JSON stream.
 
