@@ -37,7 +37,7 @@ const sanitizer = new Sanitizer((string) => {
 ```
 $ npm run bench
 ...
-Throughput: 38.77 mb/s (±1.39 %)
+Throughput: 38.62 mb/s (±1.89 %)
 ```
 
 #### LICENSE

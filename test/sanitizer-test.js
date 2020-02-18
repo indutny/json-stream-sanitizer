@@ -16,8 +16,8 @@ describe('json-stream-sanitizer', () => {
 
   it('should process input with escaped characters', async () => {
     assert.strictEqual(
-      await scan('["\\u1234\\"","bad", "okay"]'),
-      '["\\u1234\\"","good", "okay"]');
+      await scan('["\\u0444\\"","bad", "okay"]'),
+      '["ф\\"","good", "okay"]');
   });
 
   it('should emit error on unterminated string', async () => {
