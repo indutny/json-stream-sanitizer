@@ -6,7 +6,7 @@ const Sanitizer = require('../');
 
 function generate(depth) {
   if (depth === 0) {
-    return 'normal sized string';
+    return [ 'bad normal sized string' ];
   }
 
   const res = [];

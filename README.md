@@ -21,12 +21,21 @@ sanitizer.write('  "other-string": "other-value"\n');
 sanitizer.end('}');
 ```
 
+Alternatively a custom "sanitize" function can be passed as the first argument
+to the constructor:
+```js
+const sanitizer = new Sanitizer((string) => {
+  return string.replace(/bad/g, 'good')
+    .replace(/war/g, 'peace');
+});
+```
+
 ## Benchmarks
 
 ```
 $ npm run bench
 ...
-Throughput: 36.45 mb/s (±2.76 %)
+Throughput: 38.77 mb/s (±1.39 %)
 ```
 
 #### LICENSE

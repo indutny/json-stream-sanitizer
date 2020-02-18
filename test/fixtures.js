@@ -5,14 +5,14 @@ const { Buffer } = require('buffer');
 
 const Sanitizer = require('../');
 
-exports.scan = async function scan(input) {
+exports.scan = async function scan(input, sanitize) {
   input = Buffer.from(input);
 
   let last = null;
   let lastError = null;
 
   for (let step = 1; step < input.length; step++) {
-    const sanitizer = new Sanitizer(/bad/g, 'good');
+    const sanitizer = new Sanitizer(sanitize || /bad/g, 'good');
 
     const end = new Promise((resolve, reject) => {
       let output = '';

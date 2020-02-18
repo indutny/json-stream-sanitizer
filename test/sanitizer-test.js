@@ -55,4 +55,10 @@ describe('json-stream-sanitizer', () => {
       message: 'Unterminated unicode escape sequence in JSON input',
     });
   });
+
+  it('should support custom sanitize function', async () => {
+    assert.strictEqual(
+      await scan('["abcd"]', (s) => s.replace(/a/g, 'b').replace(/bb/g, 'cc')),
+      '["cccd"]');
+  });
 });
