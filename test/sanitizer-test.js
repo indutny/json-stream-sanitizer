@@ -14,6 +14,12 @@ describe('json-stream-sanitizer', () => {
       '["abcdefgh","good", "okay"]');
   });
 
+  it('should process multiline JSON with simple strings', async () => {
+    assert.strictEqual(
+      await scan('["abcdefgh","bad", "okay"]\n["bad"]'),
+      '["abcdefgh","good", "okay"]\n["good"]');
+  });
+
   it('should process input with escaped characters', async () => {
     assert.strictEqual(
       await scan('["\\u0444\\"","bad", "okay"]'),
